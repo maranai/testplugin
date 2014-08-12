@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.edifylabs.noter.testplugin"
+    version="0.6.0">
+    <name>TestPlugin</name>
+    <asset src="www/testplugin.js" target="js/testplugin.js" />
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/cordova/plugins">
+            <plugin name="TestPlugin" value="com.edifylabs.noter.TestPlugin"/>
+        </config-file>
+        <source-file src="src/android/TestPlugin.java" target-dir="src/com/edifylabs/noter/" />
+    </platform>
+    
+    <platform name="ios">
+        <plugins-plist key="TestPlugin" string="TestPlugin" />
+        <header-file src="TestPlugin.h" />
+        <source-file src="TestPlugin.m" />
+    </platform>
+    
+</plugin>
