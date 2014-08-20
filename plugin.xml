@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="testPlugin" version="1"
+<plugin id="com.edifylabs.noter.testPlugin" version="1"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>testPlugin</name>
     <description></description>
     
-    <asset src="www/testPlugin.js" target="www/js/testPlugin.js" />
+    <engines>
+        <engine name="cordova" version=">=2.7" />
+    </engines>
+    
+    <js-module src="www/testPlugin.js" name="testPlugin"> </js-module>
     
     <platform name="android">
         <config-file target="platforms/android/res/xml/config.xml" parent="/plugins">
