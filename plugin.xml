@@ -1,24 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.edifylabs.noter.testPlugin" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    
+<plugin id="testPlugin" version="1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <name>testPlugin</name>
-    <asset src="www/testPlugin.js" target="js/testPlugin.js" />
-    <description>Audio plugin for Noter</description>
+    <description></description>
+    
+    <asset src="www/testPlugin.js" target="www/js/testPlugin.js" />
     
     <platform name="android">
-        
-        <config-file target="res/xml/config.xml" parent="/plugins">
+        <config-file target="platforms/android/res/xml/config.xml" parent="/plugins">
             <plugin name="testPlugin" value="testPlugin"/>
         </config-file>
-        
         <source-file src="src/android/TestPlugin.java" target-dir="plugins/" />
     </platform>
-    
     <platform name="ios">
         <plugins-plist key="TestPlugin" string="TestPlugin" />
-        <header-file src="src/ios/testPlugin.h" />
-        <source-file src="src/ios/testPlugin.m" />
+        <header-file src="src/ios/TestPlugin.h" />
+        <source-file src="src/ios/TestPlugin.m" />
     </platform>
-    
     
 </plugin>
