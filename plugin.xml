@@ -7,7 +7,7 @@
     
     <platform name="android">
         
-        <config-file target="res/xml/config.xml" parent="/cordova/plugins">
+        <config-file target="res/xml/config.xml" parent="/plugins">
             <plugin name="testPlugin" value="testPlugin"/>
         </config-file>
         
