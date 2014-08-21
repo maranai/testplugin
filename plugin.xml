@@ -20,7 +20,7 @@
     
     <platform name="ios">
         <config-file target="config.xml" parent="/*/plugins">
-            <plugin name="TestPlugin" value="TestPlugin" onload="true" />
+            <plugin name="com.edifylabs.noter.TestPlugin" value="TestPlugin" onload="true" />
         </config-file>
         <config-file target="config.xml" parent="/widget">
             <feature name="TestPlugin">
