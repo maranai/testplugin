@@ -13,16 +13,8 @@ public class TestPlugin extends CordovaPlugin {
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-	 
-		try {
-		    if (ACTION_ADD_ENTRY.equals(action)) {
-	    		JSONObject arg_object = args.getJSONObject(0);		   
-	    		callbackContext.success("Message returned by Android plugin");	 	    		
-//		        callbackContext.sendPluginResult(new PluginResult());
-	    		return true;
-		    }
-		    callbackContext.error("Invalid action");
-		    return false;
+            callbackContext.success("Message returned by Android plugin");
+            return true;		    
 		} catch(Exception e) {
 		    System.err.println("Exception: " + e.getMessage());
 		    callbackContext.error(e.getMessage());

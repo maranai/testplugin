@@ -1,5 +1,9 @@
-var exec = require('cordova/exec');
+function TestPlugin(argument, callback) {
+	cordova.exec(callback, function(err) {
+                 callback('Plugin error');
+                 }, "TestPlugin", "TestPlugin", [argument]);
+}
 
-exports.coolMethod = function(arg0, success, error) {
-    exec(success, error, "testPlugin", "coolMethod", [arg0]);
+module.exports = {
+testPlugin: testPlugin
 };

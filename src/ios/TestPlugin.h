@@ -11,7 +11,7 @@
 
 @interface TestPlugin : CDVPlugin
 
-- (void)addEntry:(CDVInvokedUrlCommand*)command;
+- (void)TestPlugin:(CDVInvokedUrlCommand*)command;
 
 @end
 
