@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.edifylabs.noter.testPlugin"
+    id="com.edifylabs.noter.TestPlugin"
     version="1.0.0">
     <name>TestPlugin</name>
     <description>
