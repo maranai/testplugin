@@ -1,7 +1,9 @@
 function TestPlugin(argument, callback) {
-	cordova.exec(callback, function(err) {
-                 callback('Plugin error');
-                 }, "TestPlugin", "TestPlugin", [argument]);
+	cordova.exec(function(success){ callback(success);},
+                 function(err){ callback(err);},
+                 "TestPlugin",
+                 "TestPlugin",
+                 [argument])
 }
 
 module.exports = {
