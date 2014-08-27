@@ -18,22 +18,22 @@
         <config-file target="res/xml/config.xml" parent="plugins">
             <plugin name="TestPlugin" value="com.edifylabs.noter.TestPlugin"/>
         </config-file>
-        <source-file src="src/android/com/edifylabs/noter/TestPlugin.java" />
-        </platform>
-        <!-- ios -->
-        <platform name="ios">
-            <config-file target="config.xml" parent="/*/plugins">
-                <plugin name="TestPlugin" value="TestPlugin" onload="true" />
-            </config-file>
+        <source-file src="src/android/com/edifylabs/noter/TestPlugin.java" target-dir="src/android" />
+    </platform>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*/plugins">
+            <plugin name="TestPlugin" value="TestPlugin" onload="true" />
+        </config-file>
+        
+        <config-file target="config.xml" parent="/widget">
             
-            <config-file target="config.xml" parent="/widget">
-                
-                <feature name="TestPlugin">
-                    <param name="ios-package" value="TestPlugin"/>
-                    <param name="onload" value="true" />
-                </feature>
-            </config-file>
-            <header-file src="src/ios/TestPlugin.h" />
-            <source-file src="src/ios/TestPlugin.m" />
-        </platform>
-    </plugin>
+            <feature name="TestPlugin">
+                <param name="ios-package" value="TestPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/TestPlugin.h" />
+        <source-file src="src/ios/TestPlugin.m" />
+    </platform>
+</plugin>
