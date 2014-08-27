@@ -18,8 +18,7 @@
         <config-file target="res/xml/config.xml" parent="plugins">
             <plugin name="TestPlugin" value="com.edifylabs.noter.TestPlugin"/>
         </config-file>
-        <source-file src="src/android/TestPlugin.java"
-        target-dir="src/com/edifylabs/noter" />
+        <source-file src="src/android/TestPlugin.java"/>
     </platform>
     <!-- ios -->
     <platform name="ios">
