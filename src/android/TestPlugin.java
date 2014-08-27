@@ -13,6 +13,7 @@ public class TestPlugin extends CordovaPlugin {
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        try{
             callbackContext.success("Message returned by Android plugin");
             return true;		    
 		} catch(Exception e) {
