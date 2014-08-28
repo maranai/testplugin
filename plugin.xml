@@ -7,7 +7,9 @@
         A Cordova sample plugin
     </description>
     
-    <js-module src="www/TestPlugin.js" name="TestPlugin"></js-module>
+    <js-module src="www/TestPlugin.js" name="TestPlugin">
+        <clobbers target="TestPlugin"/>
+    </js-module>
     
     <engines>
         <engine name="cordova" version=">=2.7.0" />
@@ -15,22 +17,20 @@
     
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="TestPlugin" value="com.edifylabs.noter.TestPlugin"/>
-        </config-file>
-        <source-file src="src/android/com/edifylabs/noter/TestPlugin.java" target-dir="src/android" />
-    </platform>
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*/plugins">
-            <plugin name="TestPlugin" value="TestPlugin" onload="true" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TestPlugin" >
+                <param name="android-package" value="com.edifylabs.noter.TestPlugin"/>
+            </feature>
         </config-file>
         
-        <config-file target="config.xml" parent="/widget">
-            
-            <feature name="TestPlugin">
+        <source-file src="src/android/com/edifylabs/noter/TestPlugin.java" target-dir="src/android" />
+    </platform>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
                 <param name="ios-package" value="TestPlugin"/>
-                <param name="onload" value="true" />
             </feature>
         </config-file>
         <header-file src="src/ios/TestPlugin.h" />
