@@ -19,11 +19,11 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="TestPlugin" >
-                <param name="android-package" value="com.edifylabs.noter.testplugin"/>
+                <param name="android-package" value="com.edifylabs.noter.testplugin.TestPlugin"/>
             </feature>
         </config-file>
         
-        <source-file src="src/android/com/edifylabs/noter/TestPlugin.java" target-dir="src/android" />
+        <source-file src="src/android/TestPlugin.java" target-dir="src/com/edifylabs/noter/testplugin" />
     </platform>
     
     <!-- ios -->
