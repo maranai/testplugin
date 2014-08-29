@@ -7,5 +7,5 @@ function TestPlugin(argument, callback) {
 }
 
 module.exports = {
-testPlugin: testPlugin
+testplugin: testplugin
 };

@@ -1,4 +1,4 @@
-package com.edifylabs.noter;
+package com.edifylabs.noter.testplugin;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;

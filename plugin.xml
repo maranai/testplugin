@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.edifylabs.noter.TestPlugin"
+    id="com.edifylabs.noter.testplugin"
     version="1.0.0">
     <name>TestPlugin</name>
     <description>
@@ -8,7 +8,7 @@
     </description>
     
     <js-module src="www/TestPlugin.js" name="TestPlugin">
-        <clobbers target="TestPlugin"/>
+        <clobbers target="testplugin"/>
     </js-module>
     
     <engines>
@@ -19,7 +19,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="TestPlugin" >
-                <param name="android-package" value="com.edifylabs.noter.TestPlugin"/>
+                <param name="android-package" value="com.edifylabs.noter.testplugin"/>
             </feature>
         </config-file>
         
