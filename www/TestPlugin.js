@@ -1,11 +1,14 @@
-function TestPlugin(argument, callback) {
-	cordova.exec(function(success){ callback(success);},
-                 function(err){ callback(err);},
-                 "TestPlugin",
-                 "TestPlugin",
-                 [argument])
+
+var argscheck = require('cordova/argscheck'),
+utils = require('cordova/utils'),
+exec = require('cordova/exec');
+
+var testplugin = function () {
+    
 }
 
-module.exports = {
-testplugin: testplugin
-};
+testplugin.doSomething = function(successCallback, errorCallback) {
+    exec(successCallback, errorCallback, 'TestPlugin', 'TestPlugin', [args]);
+}
+
+modules.export = testplugin;
